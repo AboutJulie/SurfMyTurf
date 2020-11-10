@@ -1,11 +1,12 @@
 class SurfboardsController < ApplicationController
   def index
    @surfboards = Surfboard.all
-   @filtered_surfboards = surfboards.where(:availability == true, :location => params[:location] )
+   @filtered_surfboards = @surfboards.where(:availability == true, :location => params[:location])
 
   end
 
   def show
+    @surfboard = Surfboard.new
   end
 
   def create
