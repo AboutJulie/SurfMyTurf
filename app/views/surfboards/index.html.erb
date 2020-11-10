@@ -1,2 +1,16 @@
-<h1>Surfboards#index</h1>
-<p>Find me in app/views/surfboards/index.html.erb</p>
+<h1>Surfboards in <%=  %></h1>
+
+<p>User date</p>
+
+<ul>
+  <% @filtered_surfboards.each do |surfboard| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= surfboard.name %></h2>
+      <p><strong><%= surfboard.category %></strong></p>
+      <p><%= sufboard.price %></p>
+    </div>
+  </div>
+  <% end %>
+</ul>

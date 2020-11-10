@@ -1,5 +1,8 @@
 class SurfboardsController < ApplicationController
   def index
+   @surfboards = Surfboard.all
+   @filtered_surfboards = surfboards.where(:availability == true, :location => params[:location] )
+
   end
 
   def show
