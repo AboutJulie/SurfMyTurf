@@ -1,2 +1,7 @@
 <h1>Surfboards#new</h1>
-<p>Find me in app/views/surfboards/new.html.erb</p>
+<%= simple_form_for @surfboard do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :location %>
+  <%= f.button :submit %>
+<% end %>
