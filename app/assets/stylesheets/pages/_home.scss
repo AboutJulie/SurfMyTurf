@@ -1,13 +1,21 @@
 // Specific CSS for your home-page
 
 #jumbo  {
-  margin-top: 360px; 
-  margin-bottom: 16px;
-  background-color: rgb(240,240,240); 
+  margin-top: 176px; 
+  margin-bottom: 8px;
+  background-color: rgb(242,242,242); 
+  padding: 2px auto;
+}
+
+#filter  {
+  margin-bottom: 8px;
+  background-color: rgb(200,200,200); 
+  padding: 2px auto;
+  text-align: center;
 }
 
 body, html {
-  height: 150%;
+  height: 110%;
   min-height: 100%;
   position: relative;
 }
@@ -15,7 +23,6 @@ body, html {
 .bg {
   background-image: image-url("title-photo-2-cropped.jpg");
   height: 100%;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,12 +31,34 @@ body, html {
 }
 
 .page-footer {
-    background-color: rgb(240,240,240); 
-    position: absolute;
+    background-color: rgb(242,242,242); 
+    position: inline-block;
     left: 0;
     bottom: 0;
-    height: 80px;
+    height: 60px;
     width: 100%;
     overflow: hidden;
     opacity: 0.9;
+    text-align: inline-block;
+}
+
+#bg-blue {
+  background-color: black;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+.font-size {
+  font-size: 56px;
+  font-style: light;
+}
+
+#bg-white {
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  margin: 0px;
+  font-size: 24px;
+  font-variant: small-caps;
+  font-weight: bold;
 }
