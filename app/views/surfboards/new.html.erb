@@ -1,2 +1,8 @@
-<h1>Surfboards#new</h1>
-<p>Find me in app/views/surfboards/new.html.erb</p>
+<h1>Share your passion for surfing - borrow your surfboard!</h1>
+<%= simple_form_for @surfboard do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :location %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
