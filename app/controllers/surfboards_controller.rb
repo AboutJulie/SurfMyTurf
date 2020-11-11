@@ -22,7 +22,7 @@ class SurfboardsController < ApplicationController
     @surfboard.user = current_user
 
     if @surfboard.save
-      redirect_to surfboards_path, notice: "Your board has been added!"
+      redirect_to surfboard_path(@surfboard), notice: "Your board has been added!"
     else
       render :new
     end
