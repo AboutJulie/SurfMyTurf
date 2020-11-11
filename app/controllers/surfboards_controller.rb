@@ -1,5 +1,11 @@
 class SurfboardsController < ApplicationController
   def index
+    @surfboards = Surfboard.all
+    if params["surfboard"]["location"].empty?
+       @filtered_surfboards = @surfboards.where(availability: true)
+    else
+    @filtered_surfboards = @surfboards.where(availability: true, location: params["surfboard"]["location"])
+    end
   end
 
   def show
@@ -26,7 +32,7 @@ class SurfboardsController < ApplicationController
     @surfboard = Surfboard.find(params[:id])
     @surfboard.update(surfboard_params)
 
-    redirect_to surfboards_path(@restaurant)
+    redirect_to surfboard_path(@surfboard)
   end
 
   def edit

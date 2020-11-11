@@ -1,5 +1,22 @@
-<h1>Surfboards#show</h1>
-<p>Find me in app/views/surfboards/show.html.erb</p>
-<h2><%= @restaurant.name %></h2>
-<p><%= @restaurant.address %></p>
-<p><%= @restaurant.rating %></p>
+<% if notice.present? %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= notice.html_safe %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>
+
+<h1>Discover <%= @surfboard.name %></h1>
+
+<h3><%= @surfboard.category %></h3>
+
+
+<p> <%= @surfboard.description %> </p>
+
+<%= link_to "Book now", new_surfboard_booking_path(@surfboard), class: 'btn btn-primary' %>
+
+
+
+
+
