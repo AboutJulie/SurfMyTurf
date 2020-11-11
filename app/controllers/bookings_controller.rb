@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to surfboard_path(@surfboard), notice: "Your booking request was successfully!"
+      redirect_to surfboard_path(@surfboard), notice: "Your booking request was successful!"
     else
       render :new
     end
