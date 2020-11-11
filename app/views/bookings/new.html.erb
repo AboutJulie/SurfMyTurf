@@ -1,2 +1,7 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>Confirm your Booking </h1>
+
+<%= simple_form_for [@surfboard, @booking] do |f| %>
+ <%= f.input :start_date, html5:true, as: :date%>
+  <%= f.input :end_date, html5:true, as: :date %>
+  <%= f.button :submit, 'Confirm Booking', class: 'btn btn-primary' %>
+<% end %>
