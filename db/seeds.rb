@@ -53,7 +53,8 @@ puts "Seeding 10 random bookings.."
   Booking.create!(
     surfboard: Surfboard.all.sample,
     user: User.all.sample,
-    renting_period: rand(1..24),
+    start_date: Faker::Date.between(from: Date.today, to: 1.week.from_now),
+    end_date: Faker::Date.between(from: 1.week.from_now, to: 1.month.from_now),
     total_price: rand(20..200),
   )
   puts "doing bookings..YAY"
