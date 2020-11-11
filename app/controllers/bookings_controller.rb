@@ -1,8 +1,20 @@
 class BookingsController < ApplicationController
-  def create
+  def new
+    @booking = Booking.new
+    @surfboard = Surfboard.find(params[:surfboard_id])
   end
 
-  def new
+  def create
+    @booking = Booking.new(booking_params)
+    @surfboard = Surfboard.find(params[:surfboard_id])
+    @booking.surfboard = @surfboard
+    @booking.user = current_user
+
+    if @booking.save
+      redirect_to surfboard_path(@surfboard), notice: "Your booking request got true!"
+    else
+      render :new
+    end
   end
 
   def update
@@ -10,4 +22,11 @@ class BookingsController < ApplicationController
 
   def edit
   end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :surfboard_id)
+  end
+
 end
