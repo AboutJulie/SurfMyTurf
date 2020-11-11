@@ -47,6 +47,13 @@
     </div>
   </div>
 
+<div>
+  <%= simple_form_for @surfboard, url: surfboards_path, method: :get  do |f| %>
+  <%= f.input :location %>
+  <%= f.button :submit %>
+<% end %>
+</div>
+
 </div>
 
   <footer class="page-footer font-small blue">

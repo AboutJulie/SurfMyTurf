@@ -1,18 +1,15 @@
-<h1>Surfboards in <%= @surfboard %></h1>
+<h1>Your Surfboard Collection</h1>
 
-<p>User date</p>
 
-<ul>
-  <% @surfboards.each do |surfboard| %>
-    <%= link_to surfboards_show_path do %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= surfboard.name %></h2>
-        <p><strong><%= surfboard.category %></strong></p>
-        <p><%= surfboard.price %></p>
-      </div>
+<% @filtered_surfboards.each do |surfboard| %>
+  <%= link_to surfboard_path(surfboard) do %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= surfboard.name %></h2>
+      <p><strong><%= surfboard.category %></strong></p>
+      <p><%= surfboard.price %></p>
     </div>
-    <% end %>
+  </div>
   <% end %>
-</ul>
+<% end %>
