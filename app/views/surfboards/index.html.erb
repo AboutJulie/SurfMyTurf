@@ -1,5 +1,8 @@
-<h1>Your Surfboard Collection</h1>
 
+<div class="header-index">
+  <p>We have found <strong><%= @filtered_surfboards.count %> Boards</strong>  matching your search:</p>
+  <h1>Surfboards in <%= params[:surfboard][:location] %> </h1>
+</div>
 
 <% @filtered_surfboards.each do |surfboard| %>
   <%= link_to surfboard_path(surfboard) do %>
@@ -7,8 +10,8 @@
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
     <div class="card-product-infos">
       <h2><%= surfboard.name %></h2>
-      <p><strong><%= surfboard.category %></strong></p>
-      <p><%= surfboard.price %></p>
+      <p>category: <strong><%= surfboard.category %></strong></p>
+      <p><%= surfboard.price %>- € /day</p>
     </div>
   </div>
   <% end %>
