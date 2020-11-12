@@ -1,8 +1,11 @@
 <h1>Share your passion for surfing - borrow your surfboard!</h1>
 <%= simple_form_for @surfboard do |f| %>
   <%= f.input :name %>
+  <%= f.input :category, collection: ["shortboard", "longboard", "malibu", "fish", "sup", "gun"] %>
   <%= f.input :price %>
   <%= f.input :location %>
   <%= f.input :description %>
-  <%= f.button :submit %>
+  <%= f.input :photo, as: :file %>
+  <%= link_to 'Cancel', surfboards_path, class: 'btn btn-outline-secondary' %>
+  <%= f.submit class: 'btn btn-primary' %>
 <% end %>
