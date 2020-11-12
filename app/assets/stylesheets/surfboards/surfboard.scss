@@ -1,0 +1,50 @@
+.header-show {
+  margin: 16px;
+}
+
+.header-show h1 {
+  font-size: 34px;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #0E0000;
+  padding-bottom: 16px;
+}
+
+.header-show p {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: #5C91A5;
+}
+
+.container img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.show-main p {
+  font-size: 16px;
+  margin: 16px;
+}
+
+.show-main {
+  border-left: 0.5px solid #5C91A5 ;
+  margin: 16px;
+  margin-top: 40px;
+}
+
+.show-main h3 {
+  margin: 16px;
+  font-size: 24px;
+}
+
+.category {
+  margin: 16px;
+  padding: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #CEE1EF;
+  font-size: 14px;
+
+}
