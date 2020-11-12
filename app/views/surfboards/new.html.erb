@@ -1,11 +1,34 @@
-<h1>Share your passion for surfing - borrow your surfboard!</h1>
-<%= simple_form_for @surfboard do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category, collection: ["shortboard", "longboard", "malibu", "fish", "sup", "gun"] %>
-  <%= f.input :price %>
-  <%= f.input :location %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= link_to 'Cancel', surfboards_path, class: 'btn btn-outline-secondary' %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+<div class= "container">
+  <div class="form-container">
+    <div class="form-headline">
+  <h1>Share your surfboard with the world!</h1>
+    </div>
+    <div class="row justify-content-center">
+      <%= simple_form_for @surfboard do |f| %>
+        <%= f.input :name, input_html: { autocomplete: 'off' }%>
+        <%= f.input :category, collection: ["Shortboard", "Longboard", "Malibu", "Fish", "SUP", "Gun"] %>
+        <%= f.input :price %>
+        <%= f.input :location, input_html: { autocomplete: 'off' } %>
+        <%= f.input :description %>
+        <%= f.input :photo, as: :file %>
+        <%= link_to 'Cancel', surfboards_path, class: 'btn btn-outline-secondary' %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+<!--     <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    </div>
+  </div> -->
+</div>
+
+
+<!-- Footer if needed ^^^^^^^^ -->
