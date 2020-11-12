@@ -13,6 +13,10 @@
 
 <h3><%= @surfboard.category %></h3>
 
+<% if @surfboard.photo.attached? %>
+<%= cl_image_tag @surfboard.photo.key, height: 300, width: 400, crop: :fill %>
+</div>
+<% end %>
 
 <p> <%= @surfboard.description %> </p>
 
