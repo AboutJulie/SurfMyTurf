@@ -38,9 +38,8 @@ gem 'simple_form'
 #new gemfiles
 gem 'devise'
 gem 'cloudinary', '~> 1.16.0'
-
-
 gem 'faker'
+gem 'geocoder'
 
 
 group :development, :test do
