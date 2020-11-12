@@ -1,7 +1,11 @@
 
 <div class="header-index">
-  <p>We have found <strong><%= @filtered_surfboards.count %> Boards</strong>  matching your search:</p>
-  <h1>Surfboards in <%= params[:surfboard][:location] %> </h1>
+  <p>We have found <strong><%= @filtered_surfboards.count %> Boards</strong>  matching your search</p>
+  <% if params[:surfboard][:location].empty? %>
+    <h1> Surfboards for rent around the world: </h1>
+  <%else%>
+    <h1>Surfboards in <%= params[:surfboard][:location] %> </h1>
+  <%end%>
 </div>
 
 <% @filtered_surfboards.each do |surfboard| %>
@@ -14,8 +18,10 @@
     <% end %>
     <div class="card-product-infos">
       <h2><%= surfboard.name %></h2>
-      <p>category: <strong><%= surfboard.category %></strong></p>
-      <p><%= surfboard.price %>- € /day</p>
+      <p><strong><%= surfboard.category.capitalize %></strong></p>
+      <p><%= surfboard.price %>€ per day</p>
+      <p><%= surfboard.location %>
+      <p>LAT: <%= surfboard.latitude %> | LONG: <%= surfboard.longitude%>
     </div>
   </div>
   <% end %>
