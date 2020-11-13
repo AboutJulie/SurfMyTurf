@@ -5,7 +5,7 @@
     <h1> Surfboards for rent around the world: </h1>
   <%else%>
     <h1>Surfboards in <%= params[:surfboard][:location] %> </h1>
-  <%end%>
+  <% end %>
 </div>
 
 <% @filtered_surfboards.each do |surfboard| %>
