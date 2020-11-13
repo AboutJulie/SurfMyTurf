@@ -1,10 +1,10 @@
 
 <div class="header-index">
-  <p>We have found <strong><%= @filtered_surfboards.count %> Boards</strong>  matching your search</p>
+  <p>We have found <strong><%= @filtered_surfboards.count %> boards</strong>  matching your search</p>
   <% if params[:surfboard][:location].empty? %>
-    <h1> Surfboards for rent around the world: </h1>
-  <%else%>
-    <h1>Surfboards in <%= params[:surfboard][:location] %> </h1>
+    <h3> Surfboards around the world </h3>
+  <% else %>
+    <h2>Surfboards in "<%= params[:surfboard][:location]%>" </h2>
   <% end %>
 </div>
 
@@ -20,8 +20,9 @@
       <h2><%= surfboard.name %></h2>
       <p><strong><%= surfboard.category.capitalize %></strong></p>
       <p><%= surfboard.price %>€ per day</p>
-      <p><%= surfboard.location %>
-      <p>LAT: <%= surfboard.latitude %> | LONG: <%= surfboard.longitude%>
+      <% if params[:surfboard][:location].empty? %>
+        <p><strong><%= surfboard.location %></strong></p>
+      <%end%>
     </div>
   </div>
   <% end %>
