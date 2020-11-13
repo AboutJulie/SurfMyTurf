@@ -8,7 +8,10 @@
 <% end %>
 
 <div class="header-show">
-  <p>Have a closer look at</p>
+    <div class="inline">
+      <p><%= link_to "<",:back%></p>
+      <p></span>Have a closer look at</p>
+    </div>
   <mark id="label-white"><h1><%= @surfboard.name %></h1></mark>
 </div>
 
