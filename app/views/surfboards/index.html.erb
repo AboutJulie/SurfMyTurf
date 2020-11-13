@@ -3,9 +3,9 @@
   <p>We have found <strong><%= @filtered_surfboards.count %> boards</strong>  matching your search</p>
   <% if params[:surfboard][:location].empty? %>
     <h3> Surfboards around the world </h3>
-  <%else%>
+  <% else %>
     <h2>Surfboards in "<%= params[:surfboard][:location]%>" </h2>
-  <%end%>
+  <% end %>
 </div>
 
 <% @filtered_surfboards.each do |surfboard| %>

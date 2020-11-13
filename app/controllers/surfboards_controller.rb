@@ -3,7 +3,7 @@ class SurfboardsController < ApplicationController
     @surfboards = Surfboard.all
     if params["surfboard"]["location"].empty?
        @filtered_surfboards = @surfboards.where(availability: true)
-    else
+   else
     @filtered_surfboards = @surfboards.where(availability: true, location: params["surfboard"]["location"])
     end
   end
