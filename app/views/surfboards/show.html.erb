@@ -7,11 +7,10 @@
   </div>
 <% end %>
 
+<p><%= link_to "Back", :back, class: 'btn btn-outline-secondary', id: 'back-button' %></p>
+
 <div class="header-show">
-    <div class="inline">
-      <p><%= link_to "<",:back%></p>
-      <p></span>Have a closer look at</p>
-    </div>
+  <p></span>Have a closer look at</p>
   <mark id="label-white"><h1><%= @surfboard.name %></h1></mark>
 </div>
 
@@ -23,15 +22,15 @@
   <% end %>
 </div>
 
+<div class="button" >
+  <%= link_to "Book now", new_surfboard_booking_path(@surfboard)%>
+</div>
+
 <p class="category" >Category: <strong><%= @surfboard.category.capitalize %></strong></p>
 
 <div class="show-main">
   <h3>Specs & Details:</h3>
   <p> <%= @surfboard.description %> </p>
-</div>
-
-<div class="button" >
-  <%= link_to "Book now", new_surfboard_booking_path(@surfboard)%>
 </div>
 
 
